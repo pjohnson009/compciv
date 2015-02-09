@@ -9,3 +9,5 @@ for x in $(seq 1 $Page_Number);
 do curl -o ./scrapes/$date/$line-$x.json https://data.usajobs.gov/api/jobs?Series=$line&Page=$x
 done
 done
+
+
