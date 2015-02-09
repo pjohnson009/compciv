@@ -9,4 +9,3 @@ min=$(echo $filtered_rows | jq -r '.SalaryMin' | tr -d '$' | tr -d ',' | sort -n
 max=$(echo $filtered_rows | jq -r '.SalaryMax' | tr -d '$' | tr -d ',' | sort -n | tail -n 1)
 echo "$title|$min|$max"
 done
-
