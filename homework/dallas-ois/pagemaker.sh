@@ -1,15 +1,14 @@
-mkdir -p ~/WWW/compciv
 cd ~/compciv/homework/dallas-ois/tables
-cat > ~/WWW/compciv/dallas.html <<'EOF'
+cat > dallas.html <<'EOF'
 <html>
 <body>
 <h1>Dallas Police Department Data:  Officer Involved Shootings Since 2003</h1>
 EOF
 
-cat >> ~/WWW/compciv/dallas.html <<'EOF'
+cat >> dallas.html <<'EOF'
 <table border="1">
 EOF
-cat >> ~/WWW/compciv/dallas.html <<'EOF'
+cat >> dallas.html <<'EOF'
 <tr>
 <th>Case Number</th>
 <th>Date</th>
@@ -24,8 +23,9 @@ cat >> ~/WWW/compciv/dallas.html <<'EOF'
 <th>Narrative</th>
 EOF
 
-cat >> ~/WWW/compciv/dallas.html <<'EOF'
+cat >> dallas.html <<'EOF'
 </table>
 </body>
 </html>
 EOF
+
