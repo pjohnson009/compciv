@@ -10,16 +10,8 @@ cd ..
 cd ..
 if [[ $1 == '4' ]]; then
 cat words.txt | sort | uniq -c | sort -rn | head -n 25
-elif [[ $1 == '5' ]]; then
-cat words.txt | grep -oE '[[:alpha:]]{5,}' | sort | uniq -c | sort -rn | head -n 25
-elif [[ $1 == '6' ]]; then
-cat words.txt | grep -oE '[[:alpha:]]{6,}' | sort | uniq -c | sort -rn | head -n 25
-elif [[ $1 == '7' ]]; then
-cat words.txt | grep -oE '[[:alpha:]]{7,}' | sort | uniq -c | sort -rn | head -n 25
-elif [[ $1 == '8' ]]; then
-cat words.txt | grep -oE '[[:alpha:]]{8,}' | sort | uniq -c | sort -rn | head -n 25
-elif [[ $1 == '9' ]]; then
-cat words.txt | grep -oE '[[:alpha:]]{9,}' | sort | uniq -c | sort -rn | head -n 25
+elif [[ $1 -ge 5 ]] && [[ $1 -le 9 ]]; then
+cat words.txt | grep -oE "[[:alpha:]]{$1,}" | sort | uniq -c | sort -rn | head -n 25
 else
 echo 'Please enter a number between 4-9'
 fi
